@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
-	_ "https://github.com/liushiju/golang_examples/init/a"
-	_ "https://github.com/liushiju/golang_examples/init/b"
+
+	_ "github.com/liushiju/golang_examples/module1/init/a"
+	_ "github.com/liushiju/golang_examples/module1/init/b"
 )
 
-func init()  {
+func init() {
 	fmt.Println("main init")
 }
 
-func main()  {
+func main() {
 	fmt.Println("main function")
 }
