@@ -3,7 +3,7 @@ package a
 import (
 	"fmt"
 
-	_ "github.com/liushiju/golang_examples/module1/init/b"
+	__ "github.com/liushiju/golang_examples/tree/main/moudle1/init/b"
 )
 
 func init() {
