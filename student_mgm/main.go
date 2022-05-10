@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-	// "github.com/liushiju/golang_examples/student_mgm/"
+	// "github.com/liushiju/golang_examples/student_mgm/studeninfo"
 )
 
 func showMenu() {
