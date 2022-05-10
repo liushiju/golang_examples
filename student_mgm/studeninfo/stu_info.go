@@ -63,6 +63,6 @@ func (m *mgmStu) delStu(id int64) {
 // 显示全部学生
 func (m *mgmStu) showStu() {
 	for _, v := range m.allStu {
-		fmt.Printf("学号: %d\n姓名: %s\n年龄: %d\n分数:%d\n", v.id, v.name, v.age, v.score)
+		fmt.Printf("学号: %d, 姓名: %s, 年龄: %d, 分数:%d\n", v.id, v.name, v.age, v.score)
 	}
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	// "github.com/liushiju/golang_examples/student_mgm/"
 )
 
 func showMenu() {
@@ -41,16 +42,19 @@ func main() {
 		showMenu()
 		var input int
 		fmt.Println("按提示输入需要操作的序号")
-		stu := getInput()
+
 		fmt.Scanf("%d\n", &input)
 		switch input {
 		case 1:
-			sm.showStu
+			sm.showStu()
 		case 2:
-
+			stu := getInput()
 			sm.addStu(stu)
+
 		case 3:
+			stu := getInput()
 			sm.editStu(stu)
+
 		case 4:
 			var id int64
 			fmt.Println("输入需要删除学生的学号")
