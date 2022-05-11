@@ -4,7 +4,7 @@ import "fmt"
 
 // 学生有id、姓名、年龄、分数
 // 定义student类型
-type student struct {
+type Student struct {
 	id    int64
 	name  string
 	age   uint
@@ -12,13 +12,13 @@ type student struct {
 }
 
 // 学生管理
-type mgmStu struct {
-	allStu []*student
+type MgmStu struct {
+	allStu []*Student
 }
 
 // 构造出学生信息函数
-func newStu(id int64, name string, age, score uint) *student {
-	return &student{
+func NewStu(id int64, name string, age, score uint) *student {
+	return &Student{
 		id:    id,
 		name:  name,
 		age:   age,
@@ -27,19 +27,19 @@ func newStu(id int64, name string, age, score uint) *student {
 }
 
 // 构造出学生管理函数
-func newMgmStu() *mgmStu {
-	return &mgmStu{
-		allStu: make([]*student, 0, 100),
+func NewMgmStu() *MgmStu {
+	return &MgmStu{
+		allStu: make([]*Student, 0, 100),
 	}
 }
 
 // 添加学生
-func (m *mgmStu) addStu(newStu *student) {
+func (m *MgmStu) AddStu(newStu *Student) {
 	m.allStu = append(m.allStu, newStu)
 }
 
 // 编辑学生
-func (m *mgmStu) editStu(newStu *student) {
+func (m *MgmStu) EditStu(newStu *Student) {
 	for i, v := range m.allStu {
 		if newStu.id == v.id {
 			m.allStu[i] = newStu
@@ -50,7 +50,7 @@ func (m *mgmStu) editStu(newStu *student) {
 }
 
 // 删除学生
-func (m *mgmStu) delStu(id int64) {
+func (m *MgmStu) DelStu(id int64) {
 	for i, v := range m.allStu {
 		if id == v.id {
 			// 删除切片必须这么删
@@ -61,7 +61,7 @@ func (m *mgmStu) delStu(id int64) {
 }
 
 // 显示全部学生
-func (m *mgmStu) showStu() {
+func (m *MgmStu) ShowStu() {
 	for _, v := range m.allStu {
 		fmt.Printf("学号: %d, 姓名: %s, 年龄: %d, 分数:%d\n", v.id, v.name, v.age, v.score)
 	}
