@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	
-	"github.com/liushiju/golang_examples/student_mgm/studentinfo"
+	"github.com/liushiju/golang_examples/studentinfo"
 )
 
 func showMenu() {
