@@ -1,4 +1,4 @@
-package main
+package studentinfo
 
 import "fmt"
 
