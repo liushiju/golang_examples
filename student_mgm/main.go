@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	
-	"github.com/liushiju/golang_examples/studentinfo"
+	// "github.com/liushiju/golang_examples/studentinfo"
 )
 
 func showMenu() {
@@ -16,7 +16,7 @@ func showMenu() {
 	fmt.Println("5.退出系统")
 }
 
-func getInput() *studentinfo.student {
+func getInput() *student {
 	var (
 		id    int64
 		age   uint
@@ -33,12 +33,12 @@ func getInput() *studentinfo.student {
 	fmt.Scanf("%d\n", &age)
 	fmt.Print("请输入学员的分数：")
 	fmt.Scanf("%d\n", &score)
-	stu := studentinfo.newStu(id, name, age, score)
+	stu := newStu(id, name, age, score)
 	return stu
 }
 
 func main() {
-	sm := studentinfo.newMgmStu()
+	sm := newMgmStu()
 	for {
 		showMenu()
 		var input int
